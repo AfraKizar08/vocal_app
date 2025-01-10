@@ -16,15 +16,18 @@ class VocalsOnlyMusicApp extends StatelessWidget {
       title: 'Vocals Only Music',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.black,
           brightness: Brightness.light,
         ),
         useMaterial3: true,
         fontFamily: 'Roboto',
         textTheme: const TextTheme(
+          displayLarge: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.deepPurple),
           bodyLarge: TextStyle(fontSize: 16, color: Colors.black87),
         ),
         appBarTheme: const AppBarTheme(
           elevation: 0,
+          backgroundColor: Colors.black,
           foregroundColor: Colors.white,
         ),
       ),
@@ -62,6 +65,7 @@ class _MainScreenState extends State<MainScreen> {
             _currentIndex = index;
           });
         },
+        selectedItemColor: Colors.deepPurple,
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(
